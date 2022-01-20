@@ -6,8 +6,13 @@
   font-style: normal;
 }
 
-[class^="ml-"],
-[class*=" ml-"] {
+@font-face {
+  font-family: 'Torus';
+  src: url('../fonts/TorusNotched-Regular.ttf');
+ 
+}
+
+[class^="ml-"], [class*=" ml-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'miniline' !important;
   speak: none;
