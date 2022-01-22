@@ -1588,7 +1588,7 @@ input:hover, input:focus, textarea:hover, textarea:focus {
 }
 
 .navbar.scrolled {
-  background: #3a041f;
+  background: #3a041f !important;
   z-index: 999;
   padding: 15px;
   box-shadow: 0 0 10px rgba(166, 209, 237, 0.3);
