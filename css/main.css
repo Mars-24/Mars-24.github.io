@@ -1706,7 +1706,7 @@ input:hover, input:focus, textarea:hover, textarea:focus {
   position: absolute;
   left: 0;
   top: 152%;
-  background-color: #fff;
+  background-color: rgb(180, 154, 154);
   border: none;
   padding: 15px 0;
   border-radius: 0;

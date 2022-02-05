@@ -220,7 +220,7 @@
 	}
 	.navbar-nav {
 		padding: 30px 15px;
-		background-color: #f6f6f6;
+		/* background-color: #f6f6f6; */
 		margin-top: 2rem;
 		text-align: center;
 	}
