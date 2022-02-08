@@ -51,7 +51,6 @@ Date Created: July 16, 2018
   src: url('../fonts/TorusNotched-Regular.ttf');
 }
 
-
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -1378,7 +1377,7 @@ html {
 }
 
 body, p {
-  font-family: "Torus","Hind Vadodara", sans-serif;
+  font-family: "Torus", "Hind Vadodara", sans-serif;
   font-size: 1.8rem;
   line-height: 3rem;
   color: #69798d;
@@ -1386,7 +1385,7 @@ body, p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Torus","Fira Sans", sans-serif;
+  font-family: "Torus", "Fira Sans", sans-serif;
   color: #3a041f;
   line-height: 1.4;
 }
@@ -1640,7 +1639,7 @@ input:hover, input:focus, textarea:hover, textarea:focus {
 }
 
 .navbar-nav .nav-item .nav-link {
-  font-family: "Torus","Hind Vadodara", sans-serif;
+  font-family: "Torus", "Hind Vadodara", sans-serif;
 }
 
 .navbar-brand {
@@ -1730,6 +1729,10 @@ input:hover, input:focus, textarea:hover, textarea:focus {
   background-color: transparent;
   color: #3a041f;
 }
+
+/* --Logo-- */
+
+
 
 /* -- Banner css
 -------------------------------------- -- */
