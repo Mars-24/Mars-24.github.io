@@ -1607,9 +1607,9 @@ input:hover, input:focus, textarea:hover, textarea:focus {
   color: white;
 }
 
-.navbar.scrolled .navbar-brand img {
-  width: 80%;
-}
+/* .navbar.scrolled .navbar-brand img {
+  width: 50%;
+} */
 
 .navbar.scrolled .navbar-nav .custom-dropdown-menu {
   top: 125%;

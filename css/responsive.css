@@ -74,8 +74,8 @@
 		right: -20%;
 	}
 	.logo {
-		height: 200px;
-		width: 200px;
+		height: 150px;
+		width: 150px;
 		background-color: white;
 		border-radius: 50%;
 	}
@@ -92,8 +92,8 @@
 		bottom: -72px;
 	}
 	.logo {
-		height: 150px;
-		width: 150px;
+		height: 100px;
+		width: 100px;
 		background-color: white;
 		border-radius: 50%;
 	}
@@ -172,8 +172,8 @@
 		font-size: 1.6rem;
 	}
 	.logo {
-		height: 150px;
-		width: 150px;
+		height: 80px;
+		width: 80px;
 		background-color: white;
 		border-radius: 50%;
 	}
@@ -181,8 +181,8 @@
 
 @media screen and (max-width: 991px) {
 	.logo {
-		height: 90px;
-		width: 90px;
+		height: 70px;
+		width: 70px;
 		background-color: white;
 		border-radius: 50%;
 	}
@@ -322,8 +322,8 @@
 
 @media screen and (max-width: 767px) {
 	.logo {
-		height: 80px;
-		width: 80px;
+		height: 70px;
+		width: 70px;
 		background-color: white;
 		border-radius: 50%;
 	}
