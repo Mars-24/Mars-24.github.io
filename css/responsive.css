@@ -68,8 +68,8 @@
 		box-shadow: -5px 0 30px rgba(0, 0, 0, 0.1);
 	}
 	.small-agency-home-header-bg::after {
-		background: #fff url(../images/banner/banner-round-img-2.jpg) calc(100% - 320px) 405px no-repeat;
-		background-size: 105%;
+		background: #fff url(../images/banner/banner-round-img-2.png) calc(100% - 320px) 405px no-repeat;
+		background-size: 70%;
 		top: -46%;
 		right: -20%;
 	}

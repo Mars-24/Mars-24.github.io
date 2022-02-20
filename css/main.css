@@ -1732,8 +1732,6 @@ input:hover, input:focus, textarea:hover, textarea:focus {
 
 /* --Logo-- */
 
-
-
 /* -- Banner css
 -------------------------------------- -- */
 
@@ -1755,8 +1753,8 @@ input:hover, input:focus, textarea:hover, textarea:focus {
 }
 
 .banner::after {
-  background: #fff url(../images/banner/banner-round-img.jpg) center center no-repeat;
-  background-size: cover;
+  background: #fff url(../images/banner/banner-round-img.png) center center no-repeat;
+  /*background-size: cover;*/
   top: -46%;
   right: -20%;
   transform: rotate(0deg);
@@ -1764,8 +1762,8 @@ input:hover, input:focus, textarea:hover, textarea:focus {
 }
 
 .small-agency-home-header-bg::after {
-  background: #fff url(../images/banner/banner-round-img-2.jpg) center center no-repeat;
-  background-size: cover;
+  background: #fff url(../images/banner/banner-round-img-2.png) center center no-repeat;
+  /*background-size: cover;*/
   background-position: calc(100% - 120px) 394px;
   top: -46%;
   right: -20%;
