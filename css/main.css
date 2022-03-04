@@ -308,14 +308,14 @@ a, button, img, a:focus, button:focus {
 }
 
 .icon-container {
-  width: 135px;
+  width: 145px;
   height: 110px;
   border-radius: 110px;
   text-align: center;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transform: rotate(150deg);
+  /* transform: rotate(150deg); */
   margin-bottom: 4.5rem;
   position: relative;
 }
