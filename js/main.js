@@ -8,15 +8,21 @@ jQuery(function ($) {
         _window = $(window),
         _navbarCollapse = $('.navbar-collapse'),
         _navbarToggler = $(".navbar-toggler"),
-        _customDropdownMenu = $('.custom-dropdown-menu');
+        _customDropdownMenu = $('.custom-dropdown-menu'),
+        _custombackground = $("#nav-col");
+
 
     //animated navbar-toggler button
     _document.on('click', '.navbar .navbar-toggler', function () {
         $(this).toggleClass("change");
+         _custombackground.toggleClass('change-nav');
+
     });
+    
 
     //Close menu when clicked menu-items or outside
     $(".onepage-navbar .navbar-nav li a").on('click', function () {
+        _custombackground.removeClass('change-nav')
         _navbarCollapse.removeClass('show');
         _navbarToggler.removeClass('change');
     });
@@ -25,10 +31,16 @@ jQuery(function ($) {
         var _navMenu = $('.navbar-nav li');
         if (!_navMenu.is(e.target) && !_navMenu.find('li,a').is(e.target)) {
             if (_navbarCollapse.hasClass('show')) {
+                             _custombackground.removeClass('change-nav');
+
                 _navbarCollapse.removeClass('show');
                 $(".navbar-toggler").removeClass('change');
+
+
             }
             _customDropdownMenu.fadeOut('fast');
+
+
         }
     });
 
