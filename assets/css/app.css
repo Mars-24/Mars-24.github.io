@@ -22,8 +22,29 @@ STYLE SHEET INDEXING
 /*-------------------------
     Fonts
 -------------------------*/
-@import url("https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800;900&amp;display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&amp;display=swap");
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/Gotham-Book.woff2') format('woff2'),
+       url('../fonts/Gotham-Book.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/Gotham-Medium.woff2') format('woff2'),
+       url('../fonts/Gotham-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/Gotham-Bold.woff2') format('woff2'),
+       url('../fonts/Gotham-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
 /*-------------------------
     Variables
 -------------------------*/
@@ -113,7 +134,7 @@ html {
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Gotham", sans-serif;
   color: #0B0C0D;
   background-color: #FFF;
   font-size: 16px;
@@ -163,7 +184,7 @@ h6 a {
 
 h1,
 .h1 {
-  font-family: "Inter", sans-serif;
+  font-family: "Gotham", sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 61px;
@@ -191,7 +212,7 @@ h1,
 
 h2,
 .h2 {
-  font-family: "Inter", sans-serif;
+  font-family: "Gotham", sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 47px;
@@ -219,7 +240,7 @@ h2,
 
 h3,
 .h3 {
-  font-family: "Inter", sans-serif;
+  font-family: "Gotham", sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 36px;
@@ -247,7 +268,7 @@ h3,
 
 h4,
 .h4 {
-  font-family: "Inter", sans-serif;
+  font-family: "Gotham", sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 27px;
@@ -275,7 +296,7 @@ h4,
 
 h5,
 .h5 {
-  font-family: "Inter", sans-serif;
+  font-family: "Gotham", sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 21px;
@@ -302,7 +323,7 @@ h5,
 
 h6,
 .h6 {
-  font-family: "Inter", sans-serif;
+  font-family: "Gotham", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 150%;
@@ -328,7 +349,7 @@ h6,
 }
 
 p {
-  font-family: "Inter", sans-serif;
+  font-family: "Gotham", sans-serif;
   font-size: 16px;
   font-weight: 400;
   font-style: normal;
@@ -350,11 +371,11 @@ p {
      Font - Name
 ==============================*/
 .font-primary {
-  font-family: "Inter", sans-serif;
+  font-family: "Gotham", sans-serif;
 }
 
 .font-sec {
-  font-family: "Jost", sans-serif;
+  font-family: "Gotham", sans-serif;
 }
 
 a {
@@ -378,7 +399,7 @@ span {
 
 b,
 strong {
-  font-family: "Inter", sans-serif;
+  font-family: "Gotham", sans-serif;
 }
 
 /*-------------------------
@@ -1531,7 +1552,7 @@ Elements
 }
 
 .cus-btn {
-  font-family: "Inter", sans-serif;
+  font-family: "Gotham", sans-serif;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -1903,7 +1924,7 @@ input[type=radio]:checked {
   position: relative;
   cursor: pointer;
   color: #7A7F85;
-  font-family: "Inter", sans-serif;
+  font-family: "Gotham", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 130%;
@@ -3038,7 +3059,7 @@ input[type=radio]:checked {
   position: relative;
   cursor: pointer;
   color: #212627;
-  font-family: "Inter", sans-serif;
+  font-family: "Gotham", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
@@ -3080,7 +3101,7 @@ input[type=radio]:checked {
   position: relative;
   cursor: pointer;
   color: #212627;
-  font-family: "Inter", sans-serif;
+  font-family: "Gotham", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
@@ -3260,6 +3281,215 @@ input[type=radio]:checked {
 }
 .hero-banner-1 .right-block .glasses-card .glasses-content {
   padding: 8px 16px;
+}
+
+/* Hero Banner Carousel Styles */
+.hero-banner-carousel {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding-top: 80px;
+}
+
+@media (max-width: 992px) {
+  .hero-banner-carousel {
+    padding-top: 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-banner-carousel {
+    padding-top: 40px;
+  }
+}
+
+.hero-banner-carousel .hero-slider {
+  position: relative;
+}
+
+.hero-banner-carousel .hero-slide {
+  width: 100%;
+  min-height: 856px;
+  padding: 80px 0 64px;
+  display: flex !important;
+  align-items: center;
+}
+
+@media (max-width: 992px) {
+  .hero-banner-carousel .hero-slide {
+    min-height: auto;
+    padding: 60px 0 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-banner-carousel .hero-slide {
+    padding: 40px 0 32px;
+  }
+}
+
+.hero-banner-carousel .new-collection {
+  padding: 10px 28px;
+  border: 1px solid #7A7F85;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 24px;
+}
+
+.hero-banner-carousel .new-collection img {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 767px) {
+  .hero-banner-carousel h1 {
+    font-size: 34px;
+  }
+}
+
+.hero-banner-carousel .banner-btn {
+  display: flex;
+  gap: 30px;
+}
+
+.hero-banner-carousel .right-block {
+  position: relative;
+}
+
+.hero-banner-carousel .right-block .image-block {
+  position: relative;
+}
+
+.hero-banner-carousel .right-block .image-block img {
+  animation: fadeInSlide 0.8s ease-in-out;
+}
+
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero-banner-carousel .text-block {
+  animation: fadeInLeft 0.8s ease-in-out;
+  padding-top: 40px;
+}
+
+@media (max-width: 992px) {
+  .hero-banner-carousel .text-block {
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-banner-carousel .text-block {
+    padding-top: 0;
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Slick slider custom styles for hero */
+.hero-banner-carousel .slick-dots {
+  bottom: 40px;
+  display: flex !important;
+  justify-content: center;
+  gap: 12px;
+}
+
+.hero-banner-carousel .slick-dots li {
+  width: 12px;
+  height: 12px;
+  margin: 0;
+}
+
+.hero-banner-carousel .slick-dots li button {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  border-radius: 50%;
+  background: rgba(26, 55, 27, 0.3);
+  transition: all 0.3s ease;
+}
+
+.hero-banner-carousel .slick-dots li button:before {
+  display: none;
+}
+
+.hero-banner-carousel .slick-dots li.slick-active button {
+  background: #1A371B;
+  width: 32px;
+  border-radius: 6px;
+}
+
+.hero-banner-carousel .slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero-banner-carousel .slick-arrow:hover {
+  background: #1A371B;
+  color: #FFF;
+}
+
+.hero-banner-carousel .slick-prev {
+  left: 20px;
+}
+
+.hero-banner-carousel .slick-next {
+  right: 20px;
+}
+
+.hero-banner-carousel .slick-arrow:before {
+  font-family: "Font Awesome 5 Pro";
+  font-size: 18px;
+  opacity: 1;
+}
+
+.hero-banner-carousel .slick-prev:before {
+  content: "\f053";
+}
+
+.hero-banner-carousel .slick-next:before {
+  content: "\f054";
+}
+
+@media (max-width: 768px) {
+  .hero-banner-carousel .slick-arrow {
+    display: none !important;
+  }
 }
 
 .hero-banner-2 {
@@ -3906,7 +4136,7 @@ iframe {
   border: none;
   border-radius: 0px;
   text-align: center;
-  font-family: "Inter", sans-serif;
+  font-family: "Gotham", sans-serif;
   font-weight: 500;
   font-size: 21px;
   background-color: #FFF;
@@ -3998,7 +4228,7 @@ iframe {
   padding-bottom: 32px;
   text-align: center;
   color: #0B0C0D;
-  font-family: "Inter", sans-serif;
+  font-family: "Gotham", sans-serif;
   font-size: 21px;
   font-style: normal;
   font-weight: 500;
@@ -4087,7 +4317,7 @@ iframe {
   border: none;
   border-radius: 0px;
   text-align: center;
-  font-family: "Inter", sans-serif;
+  font-family: "Gotham", sans-serif;
   font-weight: 500;
   font-size: 21px;
   background-color: #FFF;
@@ -4181,7 +4411,7 @@ iframe {
   border: none;
   border-radius: 0px;
   text-align: center;
-  font-family: "Inter", sans-serif;
+  font-family: "Gotham", sans-serif;
   font-weight: 500;
   font-size: 21px;
   background-color: #FFF;
@@ -4302,7 +4532,7 @@ form .form-control.notes {
 .wishlist .wishlist-table thead tr th {
   padding-bottom: 24px;
   color: #212627;
-  font-family: "Inter", sans-serif;
+  font-family: "Gotham", sans-serif;
   font-size: 21px;
   font-style: normal;
   font-weight: 500;

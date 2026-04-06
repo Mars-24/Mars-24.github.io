@@ -300,6 +300,24 @@
 
 
     initializeSlick: function (e) {
+      // Hero Banner Carousel
+      if ($(".hero-slider").length) {
+        $(".hero-slider").slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 5000,
+          dots: true,
+          arrows: true,
+          fade: true,
+          infinite: true,
+          speed: 800,
+          cssEase: "ease-in-out",
+          pauseOnHover: false,
+          pauseOnFocus: false,
+        });
+      }
+
       if ($(".featured-glasses-slider").length) {
         $(".featured-glasses-slider").slick({
           slidesToShow: 4,
