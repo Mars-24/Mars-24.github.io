@@ -581,3 +581,34 @@
   };
   Init.i();
 })(window, document, jQuery);
+
+// Language Selector Functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const langDropdownItems = document.querySelectorAll('.top-info-bar .dropdown-item');
+  const currentLangSpan = document.querySelector('.top-info-bar .current-lang');
+
+  langDropdownItems.forEach(item => {
+    item.addEventListener('click', function(e) {
+      e.preventDefault();
+      const selectedLang = this.getAttribute('data-lang').toUpperCase();
+      if (currentLangSpan) {
+        currentLangSpan.textContent = selectedLang;
+      }
+
+      // Ici vous pouvez ajouter la logique pour changer réellement la langue
+      // Par exemple, rediriger vers une version traduite de la page
+      // window.location.href = '/' + this.getAttribute('data-lang') + '/';
+
+      // Ou sauvegarder la préférence dans localStorage
+      localStorage.setItem('preferredLanguage', this.getAttribute('data-lang'));
+
+      console.log('Langue sélectionnée: ' + this.getAttribute('data-lang'));
+    });
+  });
+
+  // Charger la langue préférée au démarrage
+  const savedLang = localStorage.getItem('preferredLanguage');
+  if (savedLang && currentLangSpan) {
+    currentLangSpan.textContent = savedLang.toUpperCase();
+  }
+});
