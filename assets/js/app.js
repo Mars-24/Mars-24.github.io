@@ -309,13 +309,36 @@
           autoplaySpeed: 5000,
           dots: true,
           arrows: true,
-          fade: true,
+          fade: false,
           infinite: true,
-          speed: 800,
-          cssEase: "ease-in-out",
+          speed: 1200,
+          cssEase: "cubic-bezier(0.645, 0.045, 0.355, 1)",
           pauseOnHover: false,
           pauseOnFocus: false,
         });
+
+        // Animation lors du changement de slide
+        $(".hero-slider").on("beforeChange", function (event, slick, currentSlide, nextSlide) {
+          // Ajouter classe pour animation de sortie
+          $(slick.$slides[currentSlide]).find(".text-block").addClass("slide-out-left");
+          $(slick.$slides[currentSlide]).find(".image-block").addClass("slide-out-right");
+        });
+
+        $(".hero-slider").on("afterChange", function (event, slick, currentSlide) {
+          // Nettoyer les classes d'animation de sortie
+          $(slick.$slides).find(".text-block").removeClass("slide-out-left slide-in-left");
+          $(slick.$slides).find(".image-block").removeClass("slide-out-right slide-in-right");
+
+          // Ajouter classe pour animation d'entrée
+          $(slick.$slides[currentSlide]).find(".text-block").addClass("slide-in-left");
+          $(slick.$slides[currentSlide]).find(".image-block").addClass("slide-in-right");
+        });
+
+        // Initialiser les animations pour la première slide
+        setTimeout(function() {
+          $(".hero-slider .slick-current .text-block").addClass("slide-in-left");
+          $(".hero-slider .slick-current .image-block").addClass("slide-in-right");
+        }, 100);
       }
 
       if ($(".featured-glasses-slider").length) {

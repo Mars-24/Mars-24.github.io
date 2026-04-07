@@ -3307,6 +3307,19 @@ input[type=radio]:checked {
   position: relative;
 }
 
+.hero-banner-carousel .hero-slider .slick-track {
+  display: flex !important;
+}
+
+.hero-banner-carousel .hero-slider .slick-slide {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.hero-banner-carousel .hero-slider .slick-slide.slick-active {
+  opacity: 1;
+}
+
 .hero-banner-carousel .hero-slide {
   width: 100%;
   min-height: 856px;
@@ -3339,11 +3352,38 @@ input[type=radio]:checked {
   backdrop-filter: blur(5px);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   margin-bottom: 24px;
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.hero-banner-carousel .slick-current .new-collection {
+  animation: fadeInDown 0.8s ease-out 0.2s forwards;
 }
 
 .hero-banner-carousel .new-collection img {
   width: 20px;
   height: 20px;
+  animation: rotate 3s ease-in-out infinite;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotate {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
 }
 
 @media (max-width: 767px) {
@@ -3365,24 +3405,20 @@ input[type=radio]:checked {
   position: relative;
 }
 
-.hero-banner-carousel .right-block .image-block img {
-  animation: fadeInSlide 0.8s ease-in-out;
+.hero-banner-carousel .right-block .image-block {
+  opacity: 0;
+  transform: translateX(100px);
 }
 
-@keyframes fadeInSlide {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.hero-banner-carousel .right-block .image-block img {
+  transform: scale(1);
+  transition: transform 0.6s ease;
 }
 
 .hero-banner-carousel .text-block {
-  animation: fadeInLeft 0.8s ease-in-out;
   padding-top: 40px;
+  opacity: 0;
+  transform: translateX(-100px);
 }
 
 @media (max-width: 992px) {
@@ -3397,14 +3433,83 @@ input[type=radio]:checked {
   }
 }
 
-@keyframes fadeInLeft {
-  from {
+/* Animations d'entrée */
+.slide-in-left {
+  animation: slideInFromLeft 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.slide-in-right {
+  animation: slideInFromRight 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Animations de sortie */
+.slide-out-left {
+  animation: slideOutToLeft 0.6s cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards;
+}
+
+.slide-out-right {
+  animation: slideOutToRight 0.6s cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards;
+}
+
+/* Keyframes pour les animations */
+@keyframes slideInFromLeft {
+  0% {
     opacity: 0;
-    transform: translateX(-50px);
+    transform: translateX(-100px);
   }
-  to {
+  100% {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOutToLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+}
+
+@keyframes slideOutToRight {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+}
+
+/* Animation de zoom subtil sur l'image */
+.hero-banner-carousel .slick-current .right-block .image-block img {
+  animation: subtleZoom 5s ease-in-out;
+}
+
+@keyframes subtleZoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 
