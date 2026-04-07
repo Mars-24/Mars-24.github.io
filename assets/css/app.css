@@ -2981,8 +2981,13 @@ input[type=radio]:checked {
 .books-category .social-icons .icon-box {
   background: #FFF;
   box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  padding: 8px;
+  border-radius: 50%;
+  padding: 12px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .books-category .social-icons .icon-box:hover {
   box-shadow: 2px 2px 0px 0px rgb(0, 167, 107);
