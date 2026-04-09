@@ -1555,9 +1555,9 @@ Elements
   font-family: "Gotham", sans-serif;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 16px 32px;
-  font-size: 16px;
+  gap: 6px;
+  padding: 12px 24px;
+  font-size: 14px;
   font-weight: 600;
   color: #FFF;
   border-radius: 10px;
@@ -1576,7 +1576,7 @@ Elements
   }
 }
 .cus-btn i {
-  font-size: 24px;
+  font-size: 18px;
 }
 @media (max-width: 492px) {
   .cus-btn i {
@@ -2982,9 +2982,9 @@ input[type=radio]:checked {
   background: #FFF;
   box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.2);
   border-radius: 50%;
-  padding: 12px;
-  width: 48px;
-  height: 48px;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3781,6 +3781,7 @@ input[type=radio]:checked {
   padding: 6px;
   float: right;
   margin-right: 4px;
+  border-radius: 50%;
 }
 .glasses-grid-card .image-block .dot.black {
   background-color: #0B0C0D;
@@ -3887,6 +3888,7 @@ input[type=radio]:checked {
   padding: 6px;
   float: right;
   margin-right: 4px;
+  border-radius: 50%;
 }
 .glasses-card .image-block .dot.black {
   background-color: #0B0C0D;
@@ -3937,26 +3939,51 @@ input[type=radio]:checked {
   box-shadow: 2px 0px 0px 0px rgb(0, 167, 107);
 }
 
+.varient-cards .card-1 .text-block h4 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+.varient-cards .card-1 .text-block h3 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+@media (max-width: 768px) {
+  .varient-cards .card-1 .text-block h4 {
+    font-size: 14px;
+  }
+  .varient-cards .card-1 .text-block h3 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 576px) {
+  .varient-cards .card-1 .text-block h4 {
+    font-size: 12px;
+  }
+  .varient-cards .card-1 .text-block h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+}
 .varient-cards .card-1 .image-area {
   position: relative;
-  height: 288px;
+  height: 160px;
   display: grid;
   align-content: center;
   justify-content: end;
 }
 @media (max-width: 1399px) {
   .varient-cards .card-1 .image-area {
-    height: 250px;
+    height: 150px;
   }
 }
 @media (max-width: 768px) {
   .varient-cards .card-1 .image-area {
-    height: 200px;
+    height: 130px;
   }
 }
 @media (max-width: 576px) {
   .varient-cards .card-1 .image-area {
-    height: 150px;
+    height: 100px;
   }
 }
 .varient-cards .card-1 .image-area.page-2 .wave-card {
@@ -3972,32 +3999,32 @@ input[type=radio]:checked {
 .varient-cards .card-1 .image-area .bg_cicle {
   position: absolute;
   z-index: 5;
-  top: 0;
-  right: 40px;
-    height: 210px;
-    width: 210px;
-  border-radius: 288px;
+  top: 10px;
+  right: 30px;
+    height: 120px;
+    width: 120px;
+  border-radius: 120px;
   background: rgb(0 167 107 / 16%);
 }
 @media (max-width: 1399px) {
   .varient-cards .card-1 .image-area .bg_cicle {
-    height: 250px;
-    width: 250px;
-    border-radius: 250px;
+    height: 140px;
+    width: 140px;
+    border-radius: 140px;
   }
 }
 @media (max-width: 768px) {
   .varient-cards .card-1 .image-area .bg_cicle {
-    height: 200px;
-    width: 200px;
-    border-radius: 200px;
+    height: 110px;
+    width: 110px;
+    border-radius: 110px;
   }
 }
 @media (max-width: 576px) {
   .varient-cards .card-1 .image-area .bg_cicle {
-    height: 150px;
-    width: 150px;
-    border-radius: 150px;
+    height: 90px;
+    width: 90px;
+    border-radius: 90px;
     right: 16px;
   }
 }
