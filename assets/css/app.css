@@ -3944,8 +3944,11 @@ input[type=radio]:checked {
   box-shadow: 2px 0px 0px 0px rgb(0, 167, 107);
 }
 
+.varient-cards .card-1 {
+  padding-bottom: 0 !important;
+}
 .varient-cards .card-1 .text-block h4 {
-  font-size: 16px;
+  font-size: 15px;
   margin-bottom: 4px;
 }
 .varient-cards .card-1 .text-block h3 {
@@ -3973,7 +3976,7 @@ input[type=radio]:checked {
   position: relative;
   height: 160px;
   display: grid;
-  align-content: center;
+  align-content: end;
   justify-content: end;
 }
 @media (max-width: 1399px) {
@@ -4056,7 +4059,7 @@ input[type=radio]:checked {
   z-index: 15;
   height: 100%;
   display: grid;
-  align-content: center;
+  align-content: end;
 }
 @media (max-width: 1399px) {
   .varient-cards .card-1 .image-area .product-img {
